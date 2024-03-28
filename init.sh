@@ -35,3 +35,5 @@ docker compose pull
 
 # Start docker containers
 docker compose up -d
+
+scp -r /home/deck/Downloads/testmedia tomo@192.168.1.103:/docker
