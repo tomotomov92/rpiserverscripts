@@ -2,6 +2,11 @@
 sudo apt update
 sudo apt upgrade -y
 
+# Install tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale set --advertise-exit-node
+sudo tailscale up --advertise-routes=192.168.2.0/24 --ssh --advertise-exit-node
+
 # Install docker
 curl -sSL https://get.docker.com | sh
 
